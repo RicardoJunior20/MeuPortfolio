@@ -1,0 +1,1 @@
+Toda e qualquer imagem que vier para dentro dessa pasta do footer precisa ter as dimensões de 40 x 40

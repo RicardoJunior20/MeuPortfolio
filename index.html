@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/icon/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome para ícones -->
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">Ricardo Consultorias</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            <h2>Bem-vindo ao Meu Portfólio</h2>
+            <p>Desenvolvedor Web & Designer</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Me chamo Ricardo, tenho 21 anos e moro em João pessoa - PB.</p>
+            <p>Sou estudante de Ciência da Computação, estou no 7º periodo, estudo no periodo da noite e tenho previsão de conclusão de curso em Dez 12/2024</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfólio</h2>
+            <div class="portfolio-item">
+                <a href="https://ricardojunior20.github.io/GeradorDeSenha/" target="_blank"><img src="assets/portfolio/geradorDeSenha-portfolio.png" alt="Gerador de Senha"></a>
+                <h3>Gerador de Senha</h3>
+                <p>Esse projeto foi criado com: HTML, CSS e JS<br>A criação desse projeto se baseou apenas na falta de criatividade de criar senhas deficeis e com isso eu fiz esse gerador onde apenas gero e armazeno</p>
+            </div>
+
+            <div class="portfolio-item">
+                <a href="https://github.com/RicardoJunior20/MesclarPDF" target="_blank"><img src="assets/portfolio/mesclarPDF-portfolio.jpeg" alt="MesclarPDF"></a>
+                <h3>Mesclar PDF</h3>
+                <p>Esse projeto foi feito com Python<br>A criação dele se deu pela dificuldade em unificar PDF's.<br>Sempre que precisava, eu tinha que abrir sites externos para fazer a unificação pra mim</p>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+        </div>
+    </section><!--Portfolio-->
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Seu Nome" required>
+                <input type="email" id="email" placeholder="Seu Email" required>
+                <textarea id="message" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">
+                    <img src="assets/footer/linkedin-footer.png" alt="LinkedIn">
+                </a><!--Linkedin-->
+
+                <a href="https://github.com/RicardoJunior20" target="_blank">
+                    <img src="assets/footer/github-footer.png" alt="Github">
+                </a><!--Github-->
+
+                <a href="https://www.instagram.com/ricard.rj/" target="_blank">
+                    <img src="assets/footer/instagram-footer.png" alt="Instagram">
+                </a><!--Instagram-->
+                
+                <a href="https://wa.me/5583999338677?text=Olá,%20acabei%20de%20vir%20do%20seu%20site%20e%20vi%20seu%20currículo" target="_blank">
+                    <img src="assets/footer/whatsapp-footer.png" alt="Whatsapp">
+                </a><!--Whatsapp-->
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ricardo Consultorias. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
