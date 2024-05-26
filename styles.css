@@ -8,6 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #BDB76B; /* Nova cor de fundo do corpo */
 }
 
 header {
@@ -91,106 +92,52 @@ h2 {
     color: #333;
 }
 
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .portfolio-item {
-    display: inline-block;
-    margin: 20px;
-    text-align: left;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
     width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio-item img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorção */
+    border-radius: 10px 10px 0 0;
 }
 
 .portfolio-item h3 {
-    margin-top: 10px;
+    margin: 10px;
     font-size: 1.2rem;
     color: #333;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px 20px;
-    background: #333;
-    color: #fff;
+.portfolio-item hr {
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-top: 1px solid #ccc; /* Estilo da linha */
+    margin: 10px 0; /* Espaçamento acima e abaixo da linha */
 }
 
-form button:hover {
-    background: #555;
+.portfolio-item p {
+    margin: 10px;
+    font-size: 0.9rem;
+    color: #666;
 }
 
-
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-links a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: #888;
-}
-
-@media (max-width: 768px) {
-    .nav-links li {
-        display: block;
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    .portfolio-item {
-        width: 90%;
-        margin: 10px auto;
-    }
-}
-
-/* Adicione abaixo do CSS existente */
-
-/* Estilo dos links do menu */
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Estilo do formulário de contato */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -209,6 +156,13 @@ form textarea {
     border-radius: 5px;
 }
 
+/* Placeholder styling */
+form input::placeholder,
+form textarea::placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: #999;
+}
+
 form button {
     padding: 10px 20px;
     background: #333;
@@ -220,17 +174,93 @@ form button {
 }
 
 form button:hover {
-    background-color: #555;
+    background: #555;
 }
-/* Adicione abaixo do CSS existente */
 
-/* Efeito de transição suave ao passar o mouse sobre os ícones de mídia social */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Oswald', sans-serif; /* Aplicando a fonte Oswald no rodapé */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .social-links a {
-    display: inline-block;
-    position: relative;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
 
 .social-links a:hover {
     transform: translateY(-10px); /* Levanta os ícones ao passar o mouse */
+}
+
+.skills {
+    margin-top: 40px;
+}
+
+.column {
+    width: 50%; /* Ou outro valor adequado */
+    float: left; /* Para alinhar as colunas horizontalmente */
+}
+
+.column h4 {
+    margin-bottom: 10px;
+}
+
+.column ul {
+    list-style-type: none;
+}
+
+.column ul li {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav-links li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .portfolio-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+/* Estilo dos links do menu */
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Efeito de transição suave ao passar o mouse sobre os ícones de mídia social */
+.social-links a {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-10px);
 }
