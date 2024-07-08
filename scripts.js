@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
     });
 
-    // Código de validação e envio do formulário de contato
     const contactForm = document.querySelector('#contact-form');
 
     contactForm.addEventListener('submit', function(event) {
@@ -23,15 +22,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 text: 'Por favor, preencha todos os campos do formulário!',
             });
         } else {
-            Swal.fire({
-                icon: 'success',
-                title: 'Mensagem Enviada!',
-                text: 'Obrigado pelo seu contato. Entrarei em contato em breve.',
-                showConfirmButton: false,
-                timer: 1500
-            }).then(() => {
-                // Enviar o formulário programaticamente
-                contactForm.submit();
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+            })
+            .then(response => {
+                if (response.ok) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Mensagem Enviada!',
+                        text: 'Obrigado pelo seu contato. Entrarei em contato em breve.',
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(() => {
+                        contactForm.reset();
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro!',
+                        text: 'Houve um problema ao enviar sua mensagem. Tente novamente mais tarde.',
+                    });
+                }
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro!',
+                    text: 'Houve um problema ao enviar sua mensagem. Tente novamente mais tarde.',
+                });
             });
         }
     });
