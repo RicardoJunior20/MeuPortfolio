@@ -29,9 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 text: 'Obrigado pelo seu contato. Entrarei em contato em breve.',
                 showConfirmButton: false,
                 timer: 1500
+            }).then(() => {
+                // Enviar o formulário programaticamente
+                contactForm.submit();
             });
-
-            contactForm.reset();
         }
     });
 });
