@@ -40,7 +40,6 @@ nav {
     font-weight: 700; /* Peso mais forte para destacar */
 }
 
-
 .menu-toggle {
     display: none;
     font-size: 2rem;
@@ -52,6 +51,7 @@ nav {
 .menu-toggle:hover {
     color: #FF7F50; /* Altera a cor ao passar o mouse */
 }
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -79,7 +79,7 @@ nav {
     align-items: center;
     color: #fff;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 80px; /* Ajuste para evitar sobreposição com o header */
 }
 
 .intro {
@@ -156,7 +156,7 @@ h2 {
 form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Melhor contraste */
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -249,6 +249,11 @@ footer {
 
     .portfolio-item {
         width: 90%;
+    }
+
+    .column {
+        width: 100%; /* Ajuste de responsividade para colunas */
+        float: none;
     }
 }
 
